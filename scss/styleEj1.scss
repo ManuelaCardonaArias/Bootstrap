@@ -1,3 +1,5 @@
+//? Ejercicio 1
+/*
 // definiendo los breakpoints incrementando sucesivamente 250px en 250px
 $grid-breakpoints: (
   xs: 0,
@@ -16,12 +18,43 @@ $grid-breakpoints: (
     background-color: violet;
   }
 }
-
+*/
 //Estilos para lg,xl y xxl bg green
-/* @include media-breakpoint significa desde
- lg en adelante incluye (lg,xl y xxl*/
+// @include media-breakpoint significa desde
+// lg en adelante incluye (lg,xl y xxl*/
+/*
 @include media-breakpoint-up(lg){
     body{
     background-color: green;
     }
 }
+*/
+
+//? Ejercicio Cambiar los colores por defecto
+$primary: tomato;
+$secondary: pink;
+$success: rgb(0, 213, 255);
+$info: rgb(106, 183, 17);
+$warning: rgb(255, 0, 200);
+$danger: rgba(255, 0, 55, 0.763);
+$light: azure;
+$dark: rebeccapurple;
+
+
+//importar funtions y variables
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+//? Ejercicio Añadir un color personalizado
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "manuela": #e222ff   // color personalizado
+  )
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+//
+
+//! comando para hacer que funcione el css
+//sass scss/styleEj1.scss css/custom-bootstrap.css
