@@ -1,0 +1,27 @@
+// definiendo los breakpoints incrementando sucesivamente 250px en 250px
+$grid-breakpoints: (
+  xs: 0,
+  sm: 250px,
+  md: 500px,
+  lg: 750px,
+  xl: 1000px,
+  xxl: 1250px
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Estilos para xs,sm y md bg violet
+@include media-breakpoint-between(xs, lg) {
+  body{
+    background-color: violet;
+  }
+}
+
+//Estilos para lg,xl y xxl bg green
+/* @include media-breakpoint significa desde
+ lg en adelante incluye (lg,xl y xxl*/
+@include media-breakpoint-up(lg){
+    body{
+    background-color: green;
+    }
+}
